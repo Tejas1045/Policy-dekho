@@ -1,2 +1,11 @@
 # Policy-dekho
 This a sample project which would suggest you best policy for user vehicle.
+
+## Frontend 
+Next js
+
+## Backend 
+python fast API
+
+## Database
+Postgress
