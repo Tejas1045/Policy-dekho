@@ -1,8 +1,12 @@
 "use client";
 
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
-export default function BikePage() {
+export const dynamic = "force-dynamic";
+
+// 🔹 Inner component (uses hook)
+function BikeContent() {
     const params = useSearchParams();
 
     const reg = params.get("reg");
@@ -11,6 +15,17 @@ export default function BikePage() {
     return (
         <div className="p-6">
             <h1 className="text-2xl font-bold">Bike Insurance</h1>
+            <p>Reg: {reg}</p>
+            <p>City: {city}</p>
         </div>
+    );
+}
+
+// 🔹 Page component (wrap with Suspense)
+export default function BikePage() {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <BikeContent />
+        </Suspense>
     );
 }

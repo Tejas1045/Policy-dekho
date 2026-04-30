@@ -16,7 +16,7 @@ RUN npm run build
 
 # ---------- deploy stage ------------
 
-FROM node:24.6-alpine AS Deploy
+FROM node:20-alpine 
 
 # working dir
 WORKDIR  /app

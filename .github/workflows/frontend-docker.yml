@@ -1,0 +1,23 @@
+name: Frontend Docker CI
+on:
+  push:
+    branches: [ "feature/devops/docker-implementation" ]
+env:
+  REPO_NAME: policy-dekho
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Login to Docker Hub
+      run: echo "${{ secrets.DOCKER_TOKEN }}" | docker login -u "${{ secrets.DOCKER_USER }}" --password-stdin
+
+    - name: Build Docker image
+      run: docker build -t ${{ secrets.DOCKER_USER }}/{{ env.REPO_NAME }}:latest .
+
+    - name: Push Docker image
+      run: docker push ${{ secrets.DOCKER_USER }}/{{ env.REPO_NAME }}:latest
+
