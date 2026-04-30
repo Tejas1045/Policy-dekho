@@ -16,7 +16,7 @@ jobs:
       run: echo "${{ secrets.DOCKER_TOKEN }}" | docker login -u "${{ secrets.DOCKER_USER }}" --password-stdin
 
     - name: Build Docker image
-      run: docker build -t ${{ secrets.DOCKER_USER }}/{{ env.REPO_NAME }}:latest .
+      run: docker build -t ${{ secrets.DOCKER_USER }}/${{ env.REPO_NAME }}:latest .
 
     - name: Push Docker image
       run: docker push ${{ secrets.DOCKER_USER }}/{{ env.REPO_NAME }}:latest
