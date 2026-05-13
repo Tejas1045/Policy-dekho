@@ -14,7 +14,7 @@ export default function SelectorCard() {
         <>
             <div className="selector-label">Choose your insurance type</div>
             <div className="selector-card">
-                <div className="vehicle-tabs">
+                <div className="vehicle-tabs flex-wrap">
                     <button className="v-tab" onClick={() => handleCardClick("car")}>
                         <span className="v-tab-icon">🚗</span>
                         Car Insurance
