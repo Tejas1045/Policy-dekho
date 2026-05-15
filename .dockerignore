@@ -6,3 +6,8 @@ node_modules
 .dockerignore
 .gitignore
 *.log
+.scannerwork
+README.md
+CLAUDE.md
+AGENTS.md
+sonar-project.properties
