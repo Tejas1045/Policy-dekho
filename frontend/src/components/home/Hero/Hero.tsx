@@ -1,4 +1,3 @@
-import React from 'react'
 import './Hero.css'
 import SelectorCard from '../SelectorCard'
 
@@ -19,7 +18,7 @@ const Hero = () => {
             </h1>
 
             <p className="hero-subtitle">
-                Compare 50+ plans from India's top insurers. Get an AI recommendation tailored to your vehicle, city, and driving habits — in seconds.
+                Compare 50+ plans from India&apos;s top insurers. Get an AI recommendation tailored to your vehicle, city, and driving habits — in seconds.
             </p>
             <SelectorCard/>
         </section>
