@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint . && stylelint \"src/**/*.{css,scss}\""
+    "lint:eslint": "eslint . -f json -o reports/eslint-report.json",
+    "lint": "npm run lint:eslint"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
@@ -28,7 +29,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.4",
-    "stylelint": "^17.9.1",
+    "stylelint": "^17.11.1",
     "stylelint-config-standard": "^40.0.0",
     "tailwindcss": "^4",
     "typescript": "^5"
