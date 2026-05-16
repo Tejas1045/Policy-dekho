@@ -12,5 +12,5 @@ frontend/CLAUDE.md
 frontend/AGENTS.md
 frontend/sonar-project.properties
 frontend/.scannerwork
-frontend/eslint.config.js
+frontend/eslint.config.mjs
 frontend/stylelint.config.js
